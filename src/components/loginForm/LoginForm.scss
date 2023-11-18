@@ -1,0 +1,73 @@
+@import "../../colors.scss";
+
+.login-form {
+  background-color: $darkPageBg;
+  color: $darkText;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: $semiDarkAccent;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-bottom: 15px;
+      border: 2px solid $semiDarkSecondary;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background-color: transparent;
+      color: $darkText;
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      &:focus {
+        border-color: $semiDarkAccent;
+        box-shadow: 0 0 10px 0 $semiDarkAccent;
+        outline: none;
+      }
+
+      &:hover {
+        border-color: lighten($semiDarkSecondary, 10%);
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      background-color: $semiDarkAccent;
+      color: $white;
+      padding: 12px 18px;
+      border: none;
+      transition: background-color 0.3s, transform 0.3s;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: lighten($semiDarkAccent, 10%);
+        transform: translateY(-2px);
+      }
+    }
+
+    .go-back-btn {
+      background: none;
+      border: none;
+      color: $semiDarkSecondary;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: $semiDarkBg;
+        color: $semiDarkAccent;
+      }
+    }
+  }
+}

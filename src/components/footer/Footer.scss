@@ -1,0 +1,48 @@
+// Import the color variables
+@import "./../../colors.scss";
+
+$footer-height: 70px;
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+// Main content styles
+.main-content {
+  flex-grow: 1;
+  margin-bottom: $footer-height;
+}
+
+// Styles for the footer
+.footer-container {
+  height: $footer-height;
+  background: $blackWashy;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+
+  h2 {
+    font-size: 20px;
+    color: white;
+
+    span {
+      color: $techniColor;
+      margin-left: 6px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    position: static;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .main-content {
+    margin-bottom: 0;
+  }
+}

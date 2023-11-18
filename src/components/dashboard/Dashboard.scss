@@ -1,0 +1,154 @@
+@import "../../colors.scss";
+@import "../../breakpoints.scss";
+
+.dashboard-container {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  width: auto;
+  overflow-x: hidden;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: $mobile) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    .dashboard-container {
+      padding: 15px;
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: $smallScreen) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .dashboard-container {
+      padding: 25px;
+    }
+  }
+
+  .show-home-btn {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      display: inline-block;
+      padding: 0.5em 1em;
+      color: $white;
+      background-color: $semiDarkAccent;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: lighten($semiDarkAccent, 10%);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .section-settings {
+    margin-top: 1em;
+    background: darken($semiDarkBg, 5%);
+    border-radius: 12px;
+    padding: 2em;
+    color: $darkText;
+    transition: background 0.5s ease;
+
+    h2 {
+      border-bottom: 1px solid lighten($greyLight, 10%);
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+      color: $semiDarkAccent;
+      font-size: 1.8em;
+      transition: color 0.5s ease;
+
+      &:hover {
+        color: lighten($semiDarkAccent, 10%);
+      }
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        padding: 0.5em 1em;
+        background: $semiDarkAccent;
+        color: $white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &:hover {
+          background: $semiDarkSecondary;
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="color"] {
+      width: 100%;
+      padding: 0.5em;
+      border: 1px solid darken($greyLight, 20%);
+      background: transparent;
+      color: $white;
+      border-radius: 6px;
+      margin-bottom: 1em;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+
+      &:focus {
+        border-color: $semiDarkAccent;
+        outline: none;
+        box-shadow: 0 0 5px $semiDarkAccent;
+        transform: translateY(-2px);
+      }
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+
+    .sliders-img,
+    .box-colors,
+    .courses-order,
+    .footer-text {
+      margin-bottom: 2em;
+
+      .inputs,
+      .color-input,
+      .courses-inputs,
+      .footer-inputs {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        p {
+          margin: 0;
+          flex-basis: 10%;
+          text-align: right;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

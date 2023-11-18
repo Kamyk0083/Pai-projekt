@@ -1,0 +1,56 @@
+@import "./../../colors.scss";
+@import "./../../mixins.scss";
+
+.home-container {
+  margin: 0 auto;
+  padding: 20px;
+  width: auto;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 10px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 85%;
+    }
+
+    button,
+    input[type="text"],
+    input[type="number"],
+    select {
+      font-size: 90%;
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    padding: 15px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 30px;
+  }
+
+  .section {
+    height: 400px;
+    margin-bottom: 10px;
+    background: $section;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 200px;
+    }
+
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+      height: 300px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      height: 400px;
+    }
+  }
+}
