@@ -1,16 +1,12 @@
 import "./Home.scss";
-import { Header, Slider, Boxes, Footer } from "./../../components";
-import { useContext } from "react";
-import { AppContext } from "./../../context/app.context";
+import { Header, Footer } from "./../../components";
+import Section from "../../components/section/section.component";
 
 const Home = () => {
-  const { slider } = useContext(AppContext);
-
   return (
     <div className="home-container">
       <Header />
-      {slider && <Slider />}
-      <Boxes />
+      <Section />
       <Footer />
     </div>
   );

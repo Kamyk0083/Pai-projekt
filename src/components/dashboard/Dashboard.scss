@@ -17,27 +17,19 @@
   }
 
   @media (max-width: $mobile) {
-    .dashboard-container {
-      padding: 10px;
-    }
+    padding: 10px;
   }
 
   @media (min-width: $mobile) and (max-width: $tablet) {
-    .dashboard-container {
-      padding: 15px;
-    }
+    padding: 15px;
   }
 
   @media (min-width: $tablet) and (max-width: $smallScreen) {
-    .dashboard-container {
-      padding: 20px;
-    }
+    padding: 20px;
   }
 
   @media (min-width: $desktop) {
-    .dashboard-container {
-      padding: 25px;
-    }
+    padding: 25px;
   }
 
   .show-home-btn {
@@ -81,60 +73,7 @@
       }
     }
 
-    .title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      button {
-        padding: 0.5em 1em;
-        background: $semiDarkAccent;
-        color: $white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
-
-        &:hover {
-          background: $semiDarkSecondary;
-          transform: translateY(-3px);
-        }
-      }
-    }
-
-    input[type="text"],
-    input[type="number"],
-    input[type="color"] {
-      width: 100%;
-      padding: 0.5em;
-      border: 1px solid darken($greyLight, 20%);
-      background: transparent;
-      color: $white;
-      border-radius: 6px;
-      margin-bottom: 1em;
-      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-
-      &:focus {
-        border-color: $semiDarkAccent;
-        outline: none;
-        box-shadow: 0 0 5px $semiDarkAccent;
-        transform: translateY(-2px);
-      }
-
-      &:hover {
-        transform: translateY(-1px);
-      }
-    }
-
-    .sliders-img,
-    .box-colors,
-    .courses-order,
     .footer-text {
-      margin-bottom: 2em;
-
-      .inputs,
-      .color-input,
-      .courses-inputs,
       .footer-inputs {
         display: flex;
         gap: 1em;
@@ -147,6 +86,92 @@
           display: flex;
           align-items: center;
           justify-content: flex-end;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          padding: 0.5em;
+          border: 1px solid darken($greyLight, 20%);
+          background: transparent;
+          color: $white;
+          border-radius: 6px;
+          margin-bottom: 1em;
+          transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+
+          &:focus {
+            border-color: $semiDarkAccent;
+            outline: none;
+            box-shadow: 0 0 5px $semiDarkAccent;
+            transform: translateY(-2px);
+          }
+
+          &:hover {
+            transform: translateY(-1px);
+          }
+        }
+      }
+    }
+
+    .sections-background-image {
+      margin-bottom: 2em;
+      p {
+        font-size: 1.4em;
+        color: $semiDarkAccent;
+      }
+    }
+
+    .sections-backgroundimg-inputs {
+      display: flex;
+      gap: 1em;
+      input[type="text"] {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid darken($greyLight, 20%);
+        background: transparent;
+        color: $white;
+        border-radius: 6px;
+        margin-bottom: 1em;
+        transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        &:focus {
+          border-color: $semiDarkAccent;
+          outline: none;
+          box-shadow: 0 0 5px $semiDarkAccent;
+          transform: translateY(-2px);
+        }
+        &:hover {
+          transform: translateY(-1px);
+        }
+      }
+    }
+
+    .section-order {
+      margin-bottom: 2em;
+      p {
+        font-size: 1.4em;
+        color: $semiDarkAccent;
+      }
+    }
+
+    .section-order-input {
+      display: flex;
+      gap: 1em;
+      input[type="number"] {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid darken($greyLight, 20%);
+        background: transparent;
+        color: $white;
+        border-radius: 6px;
+        margin-bottom: 1em;
+        transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        &:focus {
+          border-color: $semiDarkAccent;
+          outline: none;
+          box-shadow: 0 0 5px $semiDarkAccent;
+          transform: translateY(-2px);
+        }
+        &:hover {
+          transform: translateY(-1px);
         }
       }
     }

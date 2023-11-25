@@ -12,12 +12,9 @@ const Header = () => {
   return (
     <div className="header-container container">
       <h1 className="logo">
-        #<span>RWD</span>_online
+        #<span>React</span>_online
       </h1>
       <ul className="menu">
-        <li>
-          <a href="#boxes">Informacje o RWD</a>
-        </li>
         <li>
           {logged && (
             <a href="./" className="admin logout" onClick={logout}>
