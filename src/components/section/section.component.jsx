@@ -3,7 +3,13 @@ import { useContext } from "react";
 import { AppContext } from "../../context/app.context";
 
 const Section = () => {
-  const { sectionImg, sectionOrder } = useContext(AppContext);
+  const {
+    sectionImg,
+    sectionOrder,
+    sectionText,
+    sectionTextColor,
+    sectionBackgroundColor,
+  } = useContext(AppContext);
   return (
     <div className="section-container">
       <div
@@ -11,22 +17,34 @@ const Section = () => {
         style={{
           backgroundImage: `url(${sectionImg[1]})`,
           order: sectionOrder[1],
+          color: sectionTextColor[1],
+          background: sectionBackgroundColor[1],
         }}
-      ></div>
+      >
+        {sectionText[1]}
+      </div>
       <div
         className="section-two"
         style={{
           backgroundImage: `url(${sectionImg[2]})`,
           order: sectionOrder[2],
+          color: sectionTextColor[2],
+          background: sectionBackgroundColor[2],
         }}
-      ></div>
+      >
+        {sectionText[2]}
+      </div>
       <div
         className="section-three"
         style={{
           backgroundImage: `url(${sectionImg[3]})`,
           order: sectionOrder[3],
+          color: sectionTextColor[3],
+          background: sectionBackgroundColor[3],
         }}
-      ></div>
+      >
+        {sectionText[3]}
+      </div>
     </div>
   );
 };

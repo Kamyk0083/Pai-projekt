@@ -73,106 +73,26 @@
       }
     }
 
-    .footer-text {
-      .footer-inputs {
-        display: flex;
-        gap: 1em;
-        align-items: center;
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 0.5em;
+      border: 1px solid darken($greyLight, 20%);
+      background: transparent;
+      color: $white;
+      border-radius: 6px;
+      margin-bottom: 1em;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
-        p {
-          margin: 0;
-          flex-basis: 10%;
-          text-align: right;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-        }
-
-        input[type="text"] {
-          width: 100%;
-          padding: 0.5em;
-          border: 1px solid darken($greyLight, 20%);
-          background: transparent;
-          color: $white;
-          border-radius: 6px;
-          margin-bottom: 1em;
-          transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-
-          &:focus {
-            border-color: $semiDarkAccent;
-            outline: none;
-            box-shadow: 0 0 5px $semiDarkAccent;
-            transform: translateY(-2px);
-          }
-
-          &:hover {
-            transform: translateY(-1px);
-          }
-        }
+      &:focus {
+        border-color: $semiDarkAccent;
+        outline: none;
+        box-shadow: 0 0 5px $semiDarkAccent;
+        transform: translateY(-2px);
       }
-    }
 
-    .sections-background-image {
-      margin-bottom: 2em;
-      p {
-        font-size: 1.4em;
-        color: $semiDarkAccent;
-      }
-    }
-
-    .sections-backgroundimg-inputs {
-      display: flex;
-      gap: 1em;
-      input[type="text"] {
-        width: 100%;
-        padding: 0.5em;
-        border: 1px solid darken($greyLight, 20%);
-        background: transparent;
-        color: $white;
-        border-radius: 6px;
-        margin-bottom: 1em;
-        transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-        &:focus {
-          border-color: $semiDarkAccent;
-          outline: none;
-          box-shadow: 0 0 5px $semiDarkAccent;
-          transform: translateY(-2px);
-        }
-        &:hover {
-          transform: translateY(-1px);
-        }
-      }
-    }
-
-    .section-order {
-      margin-bottom: 2em;
-      p {
-        font-size: 1.4em;
-        color: $semiDarkAccent;
-      }
-    }
-
-    .section-order-input {
-      display: flex;
-      gap: 1em;
-      input[type="number"] {
-        width: 100%;
-        padding: 0.5em;
-        border: 1px solid darken($greyLight, 20%);
-        background: transparent;
-        color: $white;
-        border-radius: 6px;
-        margin-bottom: 1em;
-        transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-        &:focus {
-          border-color: $semiDarkAccent;
-          outline: none;
-          box-shadow: 0 0 5px $semiDarkAccent;
-          transform: translateY(-2px);
-        }
-        &:hover {
-          transform: translateY(-1px);
-        }
+      &:hover {
+        transform: translateY(-1px);
       }
     }
   }

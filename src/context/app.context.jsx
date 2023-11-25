@@ -21,6 +21,25 @@ export const AppContextProvider = ({ children }) => {
     2: "2",
     3: "3",
   });
+
+  const [sectionText, setSectionText] = useState({
+    1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et massa id odio posuere gravida sit amet et augue. Curabitur.",
+    2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus turpis vel purus venenatis, vitae venenatis justo vestibulum. Nullam ornare.",
+    3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt imperdiet dictum. Fusce elementum pharetra tellus sed imperdiet. Vivamus cursus.",
+  });
+
+  const [sectionTextColor, setSectionTextColor] = useState({
+    1: "#000000",
+    2: "#000000",
+    3: "#000000",
+  });
+
+  const [sectionBackgroundColor, setSectionBackgroundColor] = useState({
+    1: "#ffffff",
+    2: "#ffffff",
+    3: "#ffffff",
+  });
+
   return (
     <AppContext.Provider
       value={{
@@ -32,6 +51,12 @@ export const AppContextProvider = ({ children }) => {
         setSectionImg,
         sectionOrder,
         setSectionOrder,
+        sectionText,
+        setSectionText,
+        sectionTextColor,
+        setSectionTextColor,
+        sectionBackgroundColor,
+        setSectionBackgroundColor,
       }}
     >
       {children}

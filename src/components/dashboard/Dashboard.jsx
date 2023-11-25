@@ -12,6 +12,12 @@ const Dashboard = () => {
     setSectionImg,
     sectionOrder,
     setSectionOrder,
+    sectionText,
+    setSectionText,
+    sectionTextColor,
+    setSectionTextColor,
+    sectionBackgroundColor,
+    setSectionBackgroundColor,
   } = useContext(AppContext);
 
   const setFooterTextHandler = (e) => {
@@ -39,6 +45,34 @@ const Dashboard = () => {
     sectionOrder[sectionOrderNumber] = sectionOrderNumberValue;
 
     setSectionOrder(sectionOrder);
+  };
+
+  const setSectionTextHandler = (e) => {
+    const sectionTextNumber = Number(e.target.name);
+    const sectionTextNumberValue = e.target.value;
+
+    sectionText[sectionTextNumber] = sectionTextNumberValue;
+
+    setSectionText(sectionText);
+  };
+
+  const setSectionTextColorHandler = (e) => {
+    const sectionTextColorNumber = Number(e.target.name);
+    const sectionTextColorNumberValue = e.target.value;
+
+    sectionTextColor[sectionTextColorNumber] = sectionTextColorNumberValue;
+
+    setSectionTextColor(sectionTextColor);
+  };
+
+  const setSectionBackgroundColorHandler = (e) => {
+    const sectionBackgroundColorNumber = Number(e.target.name);
+    const sectionBackgroundColorNumberValue = e.target.value;
+
+    sectionBackgroundColor[sectionBackgroundColorNumber] =
+      sectionBackgroundColorNumberValue;
+
+    setSectionBackgroundColor(sectionBackgroundColor);
   };
 
   return (
@@ -115,7 +149,7 @@ const Dashboard = () => {
               name="2"
               defaultValue={sectionOrder[2]}
             />
-            <p>2</p>
+            <p>3</p>
             <input
               onChange={(e) => setSectionOrderHandler(e)}
               type="number"
@@ -123,6 +157,76 @@ const Dashboard = () => {
               max={3}
               name="3"
               defaultValue={sectionOrder[3]}
+            />
+          </div>
+          <div className="section-text">
+            <h2>Section Text</h2>
+          </div>
+          <div className="section-text-input">
+            <p>1</p>
+            <input
+              onChange={(e) => setSectionTextHandler(e)}
+              type="text"
+              name="1"
+              defaultValue={sectionText[1]}
+            />
+            <input
+              onChange={(e) => setSectionTextColorHandler(e)}
+              type="color"
+              name="1"
+              defaultValue={sectionTextColor[1]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setSectionTextHandler(e)}
+              type="text"
+              name="2"
+              defaultValue={sectionText[2]}
+            />
+            <input
+              onChange={(e) => setSectionTextColorHandler(e)}
+              type="color"
+              name="2"
+              defaultValue={sectionTextColor[2]}
+            />
+            <p>3</p>
+            <input
+              onChange={(e) => setSectionTextHandler(e)}
+              type="text"
+              name="3"
+              defaultValue={sectionText[3]}
+            />
+            <input
+              onChange={(e) => setSectionTextColorHandler(e)}
+              type="color"
+              name="3"
+              defaultValue={sectionTextColor[3]}
+            />
+          </div>
+          <div className="section-background-color">
+            <h2>Section Background Color</h2>
+          </div>
+          <div className="section-background-color-inputs">
+            <p>1</p>
+            <input
+              onChange={(e) => setSectionBackgroundColorHandler(e)}
+              type="color"
+              name="1"
+              defaultValue={sectionBackgroundColor[1]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setSectionBackgroundColorHandler(e)}
+              type="color"
+              name="2"
+              defaultValue={sectionBackgroundColor[2]}
+            />
+            <p>3</p>
+            <input
+              onChange={(e) => setSectionBackgroundColorHandler(e)}
+              type="color"
+              name="3"
+              defaultValue={sectionBackgroundColor[3]}
             />
           </div>
         </div>
