@@ -6,11 +6,12 @@ import { AppContext } from "../../context/app.context";
 
 const Section = () => {
   const {
-    sectionImg,
+    boxImg,
     sectionOrder,
-    sectionText,
-    sectionTextColor,
     sectionBackgroundColor,
+    boxColor,
+    sectionImg,
+    boxTitle,
   } = useContext(AppContext);
 
   return (
@@ -18,35 +19,45 @@ const Section = () => {
       <div
         className="section-one"
         style={{
-          backgroundImage: `url(${sectionImg[1]})`,
           order: sectionOrder[1],
-          color: sectionTextColor[1],
           backgroundColor: sectionBackgroundColor[1],
         }}
       >
-        {sectionText[1]}
+        <img src={sectionImg[1]} alt="F-16" />
       </div>
       <div
         className="section-two"
         style={{
-          backgroundImage: `url(${sectionImg[2]})`,
           order: sectionOrder[2],
-          color: sectionTextColor[2],
           backgroundColor: sectionBackgroundColor[2],
         }}
       >
-        {sectionText[2]}
-      </div>
-      <div
-        className="section-three"
-        style={{
-          backgroundImage: `url(${sectionImg[3]})`,
-          order: sectionOrder[3],
-          color: sectionTextColor[3],
-          backgroundColor: sectionBackgroundColor[3],
-        }}
-      >
-        {sectionText[3]}
+        <div className="box-container">
+          <div className="boxOne" style={{ background: boxColor[1] }}>
+            <img src={boxImg[1]} alt="F-18" />
+            <h2 className="title">{boxTitle[1]}</h2>
+            <p>Top speed: </p>
+            <p>Price: </p>
+            <p>Year of first production: </p>
+            <p>Product made in:</p>
+          </div>
+          <div className="boxTwo" style={{ background: boxColor[2] }}>
+            <img src={boxImg[2]} alt="F-35B" />
+            <h2 className="title">{boxTitle[2]}</h2>
+            <p>Top speed: </p>
+            <p>Price: </p>
+            <p>Year of first production:</p>
+            <p>Product made in:</p>
+          </div>
+          <div className="boxThree" style={{ background: boxColor[3] }}>
+            <img src={boxImg[3]} alt="Mi 2" />
+            <h2 className="title">{boxTitle[3]}</h2>
+            <p>Top speed: </p>
+            <p>Price: </p>
+            <p>Year of first production:</p>
+            <p>Product made in: </p>
+          </div>
+        </div>
       </div>
     </div>
   );

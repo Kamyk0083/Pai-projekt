@@ -8,16 +8,18 @@ const Dashboard = () => {
   const {
     footerText,
     setFooterText,
-    sectionImg,
-    setSectionImg,
+    boxImg,
+    setBoxImg,
     sectionOrder,
     setSectionOrder,
-    sectionText,
-    setSectionText,
-    sectionTextColor,
-    setSectionTextColor,
     sectionBackgroundColor,
     setSectionBackgroundColor,
+    boxColor,
+    setBoxColor,
+    sectionImg,
+    setSectionImg,
+    boxTitle,
+    setBoxTitle,
   } = useContext(AppContext);
 
   const setFooterTextHandler = (e) => {
@@ -29,13 +31,13 @@ const Dashboard = () => {
     setFooterText(footerText);
   };
 
-  const setSectionImgHandler = (e) => {
-    const sectionNumber = Number(e.target.name);
-    const sectionNumberValue = e.target.value;
+  const setBoxImgHandler = (e) => {
+    const boxNumber = Number(e.target.name);
+    const boxNumberValue = e.target.value;
 
-    sectionImg[sectionNumber] = sectionNumberValue;
+    boxImg[boxNumber] = boxNumberValue;
 
-    setSectionImg(sectionImg);
+    setBoxImg(boxImg);
   };
 
   const setSectionOrderHandler = (e) => {
@@ -45,24 +47,6 @@ const Dashboard = () => {
     sectionOrder[sectionOrderNumber] = sectionOrderNumberValue;
 
     setSectionOrder(sectionOrder);
-  };
-
-  const setSectionTextHandler = (e) => {
-    const sectionTextNumber = Number(e.target.name);
-    const sectionTextNumberValue = e.target.value;
-
-    sectionText[sectionTextNumber] = sectionTextNumberValue;
-
-    setSectionText(sectionText);
-  };
-
-  const setSectionTextColorHandler = (e) => {
-    const sectionTextColorNumber = Number(e.target.name);
-    const sectionTextColorNumberValue = e.target.value;
-
-    sectionTextColor[sectionTextColorNumber] = sectionTextColorNumberValue;
-
-    setSectionTextColor(sectionTextColor);
   };
 
   const setSectionBackgroundColorHandler = (e) => {
@@ -75,6 +59,32 @@ const Dashboard = () => {
     setSectionBackgroundColor(sectionBackgroundColor);
   };
 
+  const setBoxColorHandler = (e) => {
+    const boxColorNumber = Number(e.target.name);
+    const boxColorValue = e.target.value;
+
+    boxColor[boxColorNumber] = boxColorValue;
+
+    setBoxColor(boxColor);
+  };
+
+  const setSectionImgHandler = (e) => {
+    const sectionImgNumber = Number(e.target.name);
+    const sectionImgValue = e.target.value;
+
+    sectionImg[sectionImgNumber] = sectionImgValue;
+
+    setSectionImg(sectionImg);
+  };
+
+  const setBoxTitleHandler = (e) => {
+    const boxTitleNumber = Number(e.target.name);
+    const boxTitleValue = e.target.value;
+
+    boxTitle[boxTitleNumber] = boxTitleValue;
+
+    setBoxTitle(boxTitle);
+  };
   return (
     <div className="dashboard-container">
       <div className="show-home-btn">
@@ -102,29 +112,66 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="sections-background-image">
-            <h2>Sections background image</h2>
+            <h2>Boxes image</h2>
           </div>
           <div className="sections-backgroundimg-inputs">
             <p>1</p>
+            <input
+              onChange={(e) => setBoxImgHandler(e)}
+              type="text"
+              name="1"
+              defaultValue={boxImg[1]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setBoxImgHandler(e)}
+              type="text"
+              name="2"
+              defaultValue={boxImg[2]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setBoxImgHandler(e)}
+              type="text"
+              name="3"
+              defaultValue={boxImg[3]}
+            />
+          </div>
+          <div className="box-title">
+            <h2>Box title</h2>
+          </div>
+          <div className="box-title-inputs">
+            <p>1</p>
+            <input
+              onChange={(e) => setBoxTitleHandler(e)}
+              type="text"
+              name="1"
+              defaultValue={boxTitle[1]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setBoxTitleHandler(e)}
+              type="text"
+              name="2"
+              defaultValue={boxTitle[2]}
+            />
+            <p>3</p>
+            <input
+              onChange={(e) => setBoxTitleHandler(e)}
+              type="text"
+              name="3"
+              defaultValue={boxTitle[3]}
+            />
+          </div>
+          <div className="section-img">
+            <h2>Section Img</h2>
+          </div>
+          <div className="section-img-input">
             <input
               onChange={(e) => setSectionImgHandler(e)}
               type="text"
               name="1"
               defaultValue={sectionImg[1]}
-            />
-            <p>2</p>
-            <input
-              onChange={(e) => setSectionImgHandler(e)}
-              type="text"
-              name="2"
-              defaultValue={sectionImg[2]}
-            />
-            <p>2</p>
-            <input
-              onChange={(e) => setSectionImgHandler(e)}
-              type="text"
-              name="3"
-              defaultValue={sectionImg[3]}
             />
           </div>
           <div className="section-order">
@@ -136,7 +183,7 @@ const Dashboard = () => {
               onChange={(e) => setSectionOrderHandler(e)}
               type="number"
               min={1}
-              max={3}
+              max={2}
               name="1"
               defaultValue={sectionOrder[1]}
             />
@@ -145,62 +192,9 @@ const Dashboard = () => {
               onChange={(e) => setSectionOrderHandler(e)}
               type="number"
               min={1}
-              max={3}
+              max={2}
               name="2"
               defaultValue={sectionOrder[2]}
-            />
-            <p>3</p>
-            <input
-              onChange={(e) => setSectionOrderHandler(e)}
-              type="number"
-              min={1}
-              max={3}
-              name="3"
-              defaultValue={sectionOrder[3]}
-            />
-          </div>
-          <div className="section-text">
-            <h2>Section Text</h2>
-          </div>
-          <div className="section-text-input">
-            <p>1</p>
-            <input
-              onChange={(e) => setSectionTextHandler(e)}
-              type="text"
-              name="1"
-              defaultValue={sectionText[1]}
-            />
-            <input
-              onChange={(e) => setSectionTextColorHandler(e)}
-              type="color"
-              name="1"
-              defaultValue={sectionTextColor[1]}
-            />
-            <p>2</p>
-            <input
-              onChange={(e) => setSectionTextHandler(e)}
-              type="text"
-              name="2"
-              defaultValue={sectionText[2]}
-            />
-            <input
-              onChange={(e) => setSectionTextColorHandler(e)}
-              type="color"
-              name="2"
-              defaultValue={sectionTextColor[2]}
-            />
-            <p>3</p>
-            <input
-              onChange={(e) => setSectionTextHandler(e)}
-              type="text"
-              name="3"
-              defaultValue={sectionText[3]}
-            />
-            <input
-              onChange={(e) => setSectionTextColorHandler(e)}
-              type="color"
-              name="3"
-              defaultValue={sectionTextColor[3]}
             />
           </div>
           <div className="section-background-color">
@@ -227,6 +221,32 @@ const Dashboard = () => {
               type="color"
               name="3"
               defaultValue={sectionBackgroundColor[3]}
+            />
+          </div>
+          <div className="boxColor">
+            <h2>Box Color</h2>
+          </div>
+          <div className="boxColor-inputs">
+            <p>1</p>
+            <input
+              onChange={(e) => setBoxColorHandler(e)}
+              type="color"
+              name="1"
+              defaultValue={boxColor[1]}
+            />
+            <p>2</p>
+            <input
+              onChange={(e) => setBoxColorHandler(e)}
+              type="color"
+              name="2"
+              defaultValue={boxColor[2]}
+            />
+            <p>3</p>
+            <input
+              onChange={(e) => setBoxColorHandler(e)}
+              type="color"
+              name="3"
+              defaultValue={boxColor[3]}
             />
           </div>
         </div>
