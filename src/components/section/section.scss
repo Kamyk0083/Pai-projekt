@@ -1,3 +1,5 @@
+@import "./../../breakpoints.scss";
+
 .section-container {
   display: flex;
   flex-direction: column;
@@ -41,6 +43,55 @@
         margin-top: 1%;
         width: 40%;
         height: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .section-container {
+    font-size: 16px;
+    .box-container {
+      flex-direction: column;
+
+      .boxOne,
+      .boxTwo,
+      .boxThree {
+        width: 100%;
+        margin-bottom: 10px;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  .section-container {
+    font-size: 18px;
+
+    .box-container .boxOne,
+    .box-container .boxTwo,
+    .box-container .boxThree {
+      padding: 15px;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .section-container {
+    font-size: 20px;
+
+    .box-container .boxOne,
+    .box-container .boxTwo,
+    .box-container .boxThree {
+      padding: 20px;
+      img {
+        width: 40%;
       }
     }
   }
